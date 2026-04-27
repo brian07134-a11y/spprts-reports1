@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>레슨 신청</title>
+<style>
+body{font-family:sans-serif;background:#eef3f8;margin:0}
+.wrap{max-width:430px;margin:0 auto;padding:20px}
+.card{background:white;padding:20px;border-radius:20px;margin-bottom:15px}
+h1{font-size:22px}
+label{font-size:13px;color:#555}
+input,select,textarea{
+width:100%;padding:12px;margin-top:6px;margin-bottom:12px;
+border-radius:12px;border:1px solid #ddd
+}
+button{
+width:100%;padding:16px;
+background:#2563eb;color:white;
+border:none;border-radius:16px;
+font-size:16px;font-weight:bold
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<div class="card">
+<h1>1:1 스포츠 레슨 신청</h1>
+<p>아이에게 맞는 맞춤형 레슨을 진행합니다.</p>
+</div>
+
+<div class="card">
+<label>아이 이름</label>
+<input id="name">
+
+<label>나이</label>
+<input id="age">
+
+<label>거주 지역</label>
+<input id="area">
+
+<label>희망 종목</label>
+<select id="sport">
+<option>인라인</option>
+<option>줄넘기</option>
+<option>축구</option>
+<option>농구</option>
+<option>테니스</option>
+<option>기초체육</option>
+</select>
+
+<label>희망 요일</label>
+<select id="day">
+<option>평일</option>
+<option>주말</option>
+</select>
+
+<label>희망 시간</label>
+<select id="time">
+<option>오전</option>
+<option>오후</option>
+<option>저녁</option>
+</select>
+
+<label>아이 특징 (운동/성격)</label>
+<textarea id="note"></textarea>
+
+<button onclick="send()">신청하기</button>
+
+</div>
+
+</div>
+
+<script>
+function send(){
+const text = `
+[레슨 신청]
+
+이름: ${name.value}
+나이: ${age.value}
+지역: ${area.value}
+종목: ${sport.value}
+요일: ${day.value}
+시간: ${time.value}
+특징: ${note.value}
+`;
+
+navigator.clipboard.writeText(text);
+
+alert("신청 내용이 복사되었습니다!\n카톡으로 붙여넣어 주세요.");
+}
+</script>
+
+</body>
+</html>
