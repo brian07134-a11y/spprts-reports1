@@ -285,4 +285,181 @@ renderTests();generateReport(false);loadFromParams();
 </div>
   
 </body>
+</html><!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>블루트랙 데모</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{background:#eef3f8;font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR",sans-serif;color:#172033}.app{max-width:430px;margin:0 auto;min-height:100vh;background:#f8fafc;padding:18px 16px 92px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.brand{font-size:22px;font-weight:900;color:#2563eb;letter-spacing:-.7px}.brand small{display:block;font-size:11px;color:#64748b;margin-top:2px;letter-spacing:0}.profile{width:38px;height:38px;border-radius:50%;background:#dbeafe;color:#2563eb;display:flex;align-items:center;justify-content:center;font-weight:900}.hero{background:linear-gradient(135deg,#2563eb,#38bdf8);color:white;border-radius:28px;padding:24px 22px;margin-bottom:16px;box-shadow:0 14px 32px rgba(37,99,235,.22)}.hero small{font-size:13px;opacity:.9}.hero h1{font-size:25px;line-height:1.3;letter-spacing:-.8px;margin:8px 0 12px}.hero p{font-size:14px;line-height:1.55;opacity:.94}.hero-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.hero-btn{border:0;border-radius:16px;padding:13px 10px;font-weight:900;font-size:14px}.white{background:white;color:#2563eb}.ghost{background:rgba(255,255,255,.18);color:white;border:1px solid rgba(255,255,255,.36)}.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}.tab{border:0;background:#e2e8f0;color:#475569;border-radius:16px;padding:12px 5px;font-size:13px;font-weight:900}.tab.active{background:#2563eb;color:white}.section{display:flex;justify-content:space-between;align-items:center;margin:22px 2px 12px}.section h2{font-size:18px;letter-spacing:-.5px}.section a{font-size:13px;font-weight:900;color:#2563eb;text-decoration:none}.card{background:white;border-radius:24px;padding:18px;margin-bottom:14px;box-shadow:0 8px 22px rgba(15,23,42,.06);border:1px solid #eef2f7}.muted{font-size:13px;color:#64748b;line-height:1.5}.teacher-list{display:grid;gap:12px}.teacher{background:white;border:1px solid #eef2f7;border-radius:24px;padding:15px;box-shadow:0 8px 22px rgba(15,23,42,.06);cursor:pointer}.teacher-main{display:flex;gap:13px;align-items:flex-start}.avatar{width:56px;height:56px;border-radius:22px;background:linear-gradient(135deg,#dbeafe,#bfdbfe);display:flex;align-items:center;justify-content:center;font-size:27px;flex-shrink:0}.teacher h3{font-size:16px;margin-bottom:4px}.badge{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:999px;padding:5px 8px;font-size:11px;font-weight:900;margin-bottom:6px}.stars{font-size:12px;color:#f59e0b;font-weight:900;margin-top:6px}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.tag{background:#f8fafc;border:1px solid #e2e8f0;border-radius:999px;padding:6px 8px;font-size:11px;font-weight:800;color:#475569}.detail{display:none;margin-top:14px;padding-top:14px;border-top:1px solid #eef2f7}.detail.active{display:block}.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.photo{height:90px;border-radius:18px;background:linear-gradient(135deg,#dbeafe,#eff6ff);display:flex;align-items:center;justify-content:center;color:#2563eb;font-weight:900}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.info{background:#f8fafc;border-radius:16px;padding:11px}.info span{display:block;font-size:11px;color:#64748b;font-weight:900;margin-bottom:4px}.info b{font-size:13px}.btn{width:100%;border:0;background:#2563eb;color:white;padding:15px;border-radius:18px;font-size:15px;font-weight:900;margin-top:12px}.community,.education{display:none}.community.active,.education.active,.teachers.active{display:block}.post{background:white;border:1px solid #eef2f7;border-radius:22px;padding:16px;margin-bottom:12px;box-shadow:0 8px 22px rgba(15,23,42,.06)}.post-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.anonymous{font-size:12px;font-weight:900;color:#2563eb;background:#eff6ff;border-radius:999px;padding:6px 9px}.post h3{font-size:15px;line-height:1.4;margin-bottom:8px}.meta{font-size:12px;color:#64748b}.reply{background:#f8fafc;border-radius:16px;padding:12px;margin-top:10px;font-size:13px;color:#334155;line-height:1.5}.write-box{background:white;border:1px solid #eef2f7;border-radius:24px;padding:16px;margin-bottom:14px;box-shadow:0 8px 22px rgba(15,23,42,.06)}.write-box input{width:100%;border:1px solid #e2e8f0;background:#f8fafc;border-radius:16px;padding:13px;font-size:14px}.course{display:flex;gap:13px;background:white;border:1px solid #eef2f7;border-radius:24px;padding:15px;margin-bottom:12px;box-shadow:0 8px 22px rgba(15,23,42,.06)}.course-thumb{width:74px;height:74px;border-radius:20px;background:linear-gradient(135deg,#dbeafe,#bfdbfe);display:flex;align-items:center;justify-content:center;color:#2563eb;font-size:28px;flex-shrink:0}.course h3{font-size:15px;margin-bottom:5px;line-height:1.35}.price{font-size:13px;color:#2563eb;font-weight:900;margin-top:7px}.bottom{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:430px;background:rgba(255,255,255,.96);border-top:1px solid #e2e8f0;display:grid;grid-template-columns:repeat(4,1fr);padding:10px 8px 16px;backdrop-filter:blur(12px)}.nav{text-align:center;color:#64748b;font-size:11px;font-weight:800}.nav span{display:block;font-size:21px;margin-bottom:3px}.nav.on{color:#2563eb}.cta{background:#172033;color:white;border-radius:24px;padding:20px;margin-top:16px}.cta h2{font-size:19px;margin-bottom:8px}.cta p{font-size:13px;color:#cbd5e1;line-height:1.55}.cta button{background:white;color:#2563eb}@media(min-width:720px){body{padding:34px 0}.app{border-radius:38px;min-height:860px;box-shadow:0 30px 80px rgba(15,23,42,.18)}.bottom{border-radius:0 0 38px 38px}}
+</style>
+</head>
+<body>
+<main class="app">
+  <header class="top">
+    <div class="brand">BLUETRACK<small>체육강사 생태계 플랫폼</small></div>
+    <div class="profile">BT</div>
+  </header>
+
+  <section class="hero">
+    <small>학부모 · 기관 · 센터를 위한 스포츠 강사 매칭</small>
+    <h1>검증된 체육 선생님을<br>프로필로 비교하고 선택하세요</h1>
+    <p>선생님 이력, 수업 철학, 활동지역, 수업 가능 시간, 리뷰와 교육 이수 내역까지 한 번에 확인합니다.</p>
+    <div class="hero-btns">
+      <button class="hero-btn white" onclick="showPage('teachers')">선생님 찾기</button>
+      <button class="hero-btn ghost" onclick="location.href='reserve.html'">상담 신청</button>
+    </div>
+  </section>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showPage('teachers')">선생님</button>
+    <button class="tab" onclick="showPage('community')">커뮤니티</button>
+    <button class="tab" onclick="showPage('education')">교육/세미나</button>
+  </div>
+
+  <section id="teachers" class="teachers active">
+    <div class="section"><h2>파트너 선생님</h2><a href="#">10명 보기</a></div>
+    <div class="teacher-list" id="teacherList"></div>
+
+    <div class="cta">
+      <h2>센터·기관에서 선생님이 필요하신가요?</h2>
+      <p>블루트랙은 검증된 체육강사 프로필과 수업 리포트 시스템을 함께 제공합니다.</p>
+      <button class="btn" onclick="location.href='reserve.html'">기관 상담 신청하기</button>
+    </div>
+  </section>
+
+  <section id="community" class="community">
+    <div class="section"><h2>선생님 커뮤니티</h2><a href="#">글쓰기</a></div>
+    <div class="write-box">
+      <input placeholder="선생님들께 질문을 남겨보세요. 예) 이럴 때 어떻게 지도하시나요?" />
+      <button class="btn" style="margin-top:10px;background:#172033">질문 등록하기</button>
+    </div>
+
+    <div class="post">
+      <div class="post-top"><span class="anonymous">익명 체육쌤</span><span class="meta">댓글 12</span></div>
+      <h3>Q. 수업 중 아이가 계속 무섭다고 뒤로 빠질 때 선생님들은 어떻게 하시나요 ㅠㅠ</h3>
+      <p class="meta">인라인 · 초등 저학년 · 10분 전</p>
+      <div class="reply">원종주 코치: 바로 기술 들어가지 말고, 장비 신고 걷기-멈추기-성공 경험을 먼저 주세요. 무서움은 기술 부족보다 통제감 부족일 때가 많습니다.</div>
+    </div>
+
+    <div class="post">
+      <div class="post-top"><span class="anonymous">익명 강사</span><span class="meta">댓글 7</span></div>
+      <h3>Q. 이 교구 이름 뭔가요? 색깔 원형 마커인데 미끄러지지 않는 제품 찾고 있어요.</h3>
+      <p class="meta">교구 추천 · 32분 전</p>
+    </div>
+
+    <div class="post">
+      <div class="post-top"><span class="anonymous">익명 센터장</span><span class="meta">댓글 21</span></div>
+      <h3>Q. 학부모 피드백을 매번 카톡으로 주는데 너무 오래 걸립니다. 자동화 어떻게 하시나요?</h3>
+      <p class="meta">수업 운영 · 1시간 전</p>
+      <div class="reply">추천 답변: 블루트랙 리포트 템플릿을 쓰면 점수, 영상, 다음 수업 방향을 링크로 정리할 수 있습니다.</div>
+    </div>
+  </section>
+
+  <section id="education" class="education">
+    <div class="card">
+      <h2>선생님 교육 트랙</h2>
+      <p class="muted">블루트랙은 단순 매칭이 아닌, 교육 → 검증 → 매칭 구조로 운영됩니다.</p>
+    </div>
+
+    <div class="section"><h2>교육 및 세미나</h2><a href="#">전체보기</a></div>
+
+    <div class="course">
+      <div class="course-thumb">🛼</div>
+      <div>
+        <h3>블루트랙 인라인 레슨 지도법</h3>
+        <p class="muted">원종주 코치 · 초급 아이 지도 흐름, 안전, 항아리, 푸쉬 지도</p>
+        <div class="price">파트너 무료 · 일반 49,000원</div>
+      </div>
+    </div>
+
+    <div class="course">
+      <div class="course-thumb">📊</div>
+      <div>
+        <h3>신체문해력 측정 & 리포트 작성법</h3>
+        <p class="muted">CAMSA 기반 간이 측정, 학부모용 리포트 문장 구성</p>
+        <div class="price">온라인 세미나 · 39,000원</div>
+      </div>
+    </div>
+
+    <div class="course">
+      <div class="course-thumb">🎥</div>
+      <div>
+        <h3>수업 영상 피드백 시스템 만들기</h3>
+        <p class="muted">영상 촬영, 전후 비교, 카톡 전달용 피드백 구조</p>
+        <div class="price">파트너 필수교육</div>
+      </div>
+    </div>
+
+    <div class="cta">
+      <h2>블루트랙 파트너 선생님이 되고 싶나요?</h2>
+      <p>교육 이수 후 프로필 등록, 기관 매칭, 수업 리포트 시스템을 사용할 수 있습니다.</p>
+      <button class="btn">파트너 신청하기</button>
+    </div>
+  </section>
+
+  <nav class="bottom">
+    <div class="nav on" onclick="showPage('teachers')"><span>👥</span>선생님</div>
+    <div class="nav" onclick="showPage('community')"><span>💬</span>커뮤니티</div>
+    <div class="nav" onclick="showPage('education')"><span>🎓</span>교육</div>
+    <div class="nav" onclick="location.href='reserve.html'"><span>📞</span>상담</div>
+  </nav>
+</main>
+
+<script>
+const teachers=[
+ {name:'원종주',role:'파트너 선생님',career:'5년 경력 · 인라인 엘리트 코치',rating:'4.9',review:'리뷰 38개',area:'압구정 · 대치 · 한남',time:'평일 15:00~20:00',fee:'1회 70,000원~',slogan:'아이의 움직임을 읽고, 성장 방향을 설계합니다.',spec:['인라인 선수 출신','초등 체육 지도','신체문해력 리포트'],emoji:'🛼'},
+ {name:'김도윤',role:'파트너 선생님',career:'6년 경력 · 축구 전문 코치',rating:'4.8',review:'리뷰 24개',area:'강남 · 서초',time:'주말 가능',fee:'1회 80,000원~',slogan:'기본기와 자신감을 함께 만드는 축구 수업',spec:['유소년 축구','드리블/슈팅','게임 이해'],emoji:'⚽'},
+ {name:'박서연',role:'파트너 선생님',career:'4년 경력 · 줄넘기/리듬 트레이닝',rating:'4.9',review:'리뷰 31개',area:'송파 · 잠실',time:'평일 오후',fee:'1회 65,000원~',slogan:'여아도 즐겁게 시작하는 리듬 중심 체육',spec:['음악줄넘기','리듬감','협응'],emoji:'🤸'},
+ {name:'이준호',role:'파트너 선생님',career:'7년 경력 · 농구 전문 코치',rating:'4.7',review:'리뷰 19개',area:'분당 · 판교',time:'화/목/토',fee:'1회 75,000원~',slogan:'드리블보다 먼저 몸의 중심을 잡습니다.',spec:['농구 기본기','볼핸들링','민첩성'],emoji:'🏀'},
+ {name:'최민지',role:'파트너 선생님',career:'5년 경력 · 유아체육 전문',rating:'4.8',review:'리뷰 27개',area:'강동 · 하남',time:'오전 가능',fee:'1회 60,000원~',slogan:'운동을 처음 만나는 아이에게 안전한 시작을',spec:['유아체육','기초움직임','놀이체육'],emoji:'🌈'},
+ {name:'정하민',role:'파트너 선생님',career:'3년 경력 · 테니스 입문 지도',rating:'4.6',review:'리뷰 14개',area:'용산 · 마포',time:'주말 오전',fee:'1회 70,000원~',slogan:'라켓 스포츠의 첫 경험을 쉽게 만듭니다.',spec:['테니스 입문','라켓 감각','공간인지'],emoji:'🎾'},
+ {name:'문지호',role:'파트너 선생님',career:'8년 경력 · 배드민턴 코치',rating:'4.9',review:'리뷰 41개',area:'목동 · 마곡',time:'평일 저녁',fee:'1회 75,000원~',slogan:'스텝과 타이밍을 잡아주는 배드민턴 수업',spec:['스텝','라켓 컨트롤','고학년 전문'],emoji:'🏸'},
+ {name:'한유진',role:'파트너 선생님',career:'4년 경력 · 달리기/민첩성',rating:'4.8',review:'리뷰 22개',area:'성수 · 압구정',time:'월/수 가능',fee:'1회 65,000원~',slogan:'느린 아이도 달리기를 좋아하게 만듭니다.',spec:['달리기','민첩성','스피드'],emoji:'🏃'},
+ {name:'오세찬',role:'파트너 선생님',career:'6년 경력 · 기초체육/체력',rating:'4.7',review:'리뷰 18개',area:'일산 · 은평',time:'협의 가능',fee:'1회 60,000원~',slogan:'체력이 약한 아이를 위한 단계별 수업',spec:['기초체력','균형','점프'],emoji:'💪'},
+ {name:'강리나',role:'파트너 선생님',career:'5년 경력 · 특수체육/개별화 수업',rating:'4.9',review:'리뷰 35개',area:'대치 · 개포',time:'평일 낮',fee:'1회 85,000원~',slogan:'아이의 속도에 맞춰 움직임을 열어줍니다.',spec:['개별화','감각운동','소극적 아이'],emoji:'🧩'}
+];
+function renderTeachers(){
+ const list=document.getElementById('teacherList');
+ list.innerHTML=teachers.map((t,i)=>`
+ <div class="teacher" onclick="toggleDetail(${i})">
+   <div class="teacher-main">
+     <div class="avatar">${t.emoji}</div>
+     <div>
+       <span class="badge">${t.role}</span>
+       <h3>${t.name} 선생님</h3>
+       <p class="muted">${t.career}</p>
+       <div class="stars">★★★★★ ${t.rating} · ${t.review}</div>
+       <div class="tags">${t.spec.map(s=>`<span class="tag">${s}</span>`).join('')}</div>
+     </div>
+   </div>
+   <div class="detail" id="detail-${i}">
+     <p class="muted"><b>수업 철학</b><br>${t.slogan}</p>
+     <div class="photo-grid"><div class="photo">수업사진</div><div class="photo">지도장면</div></div>
+     <div class="info-grid">
+       <div class="info"><span>활동지역</span><b>${t.area}</b></div>
+       <div class="info"><span>가능시간</span><b>${t.time}</b></div>
+       <div class="info"><span>수업료</span><b>${t.fee}</b></div>
+       <div class="info"><span>등급</span><b>블루트랙 파트너</b></div>
+     </div>
+     <p style="font-size:13px;color:#2563eb;font-weight:900;margin-top:10px;">✔ 현재 아이 상태 기반으로 이 선생님이 추천됩니다</p>
+     <button class="btn" onclick="event.stopPropagation(); location.href='reserve.html'">이 선생님 상담하기</button>
+   </div>
+ </div>`).join('');
+}
+function toggleDetail(i){document.getElementById(`detail-${i}`).classList.toggle('active')}
+function showPage(page){
+ document.querySelectorAll('.teachers,.community,.education').forEach(s=>s.classList.remove('active'));
+ document.getElementById(page).classList.add('active');
+ document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+ const idx=page==='teachers'?0:page==='community'?1:2;
+ document.querySelectorAll('.tab')[idx].classList.add('active');
+ document.querySelectorAll('.nav').forEach(n=>n.classList.remove('on'));
+ document.querySelectorAll('.nav')[idx].classList.add('on');
+}
+renderTeachers();
+</script>
+</body>
 </html>
+
